@@ -1,0 +1,114 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    --bg-gradient: linear-gradient(180deg, #f8fafc, #ffffff);
+    --shadow-elegant: 0 4px 20px -4px rgba(59, 130, 246, 0.15);
+    --shadow-soft: 0 2px 8px -2px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background: var(--bg-gradient);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+}
+
+.gradient-primary {
+    background: var(--primary-gradient);
+}
+
+.shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+}
+
+.shadow-soft {
+    box-shadow: var(--shadow-soft);
+}
+
+.card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elegant);
+}
+
+.image-upload-area {
+    border: 2px dashed #d1d5db;
+    border-radius: 0.75rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #f9fafb;
+}
+
+.image-upload-area:hover,
+.image-upload-area.dragover {
+    border-color: #3b82f6;
+    background: #eff6ff;
+}
+
+.image-preview {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-primary {
+    background: var(--primary-gradient);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    transform: translateY(-1px);
+}
+
+.form-control:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25);
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+}
+
+.hero-icon {
+    width: 4rem;
+    height: 4rem;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.loading-spinner {
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid #ffffff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 0.5rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
